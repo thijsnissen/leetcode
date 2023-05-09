@@ -35,3 +35,8 @@ class Test extends AnyFunSuite:
 		assertResult(expected = List(7, 0, 8))(actual = AddTwoNumbers.mySolution3(List(2, 4, 3), List(5, 6, 4)))
 		assertResult(expected = List(0))(actual = AddTwoNumbers.mySolution3(List(0), List(0)))
 		assertResult(expected = List(8, 9, 9, 9, 0, 0, 0, 1))(actual = AddTwoNumbers.mySolution3(List(9, 9, 9, 9, 9, 9, 9), List(9, 9, 9, 9)))
+
+	test("LongestSubstringWithoutRepeatingCharacters"):
+		assertResult(expected = 3)(LongestSubstringWithoutRepeatingCharacters.mySolution("abcabcbb"))
+		assertResult(expected = 1)(LongestSubstringWithoutRepeatingCharacters.mySolution("bbbbb"))
+		assertResult(expected = 3)(LongestSubstringWithoutRepeatingCharacters.mySolution("pwwkew"))
