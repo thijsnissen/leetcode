@@ -40,3 +40,22 @@ class Test extends AnyFunSuite:
 		assertResult(expected = true)(actual = PalindromeNumber.theirSolution(121))
 		assertResult(expected = false)(actual = PalindromeNumber.theirSolution(-121))
 		assertResult(expected = false)(actual = PalindromeNumber.theirSolution(10))
+
+	test("13. Roman To Integer"):
+		assertResult(3)(RomanToInteger.mySolution("III"))
+		assertResult(58)(RomanToInteger.mySolution("LVIII"))
+		assertResult(1994)(RomanToInteger.mySolution("MCMXCIV"))
+
+		assertResult(3)(RomanToInteger.theirSolution("III"))
+		assertResult(58)(RomanToInteger.theirSolution("LVIII"))
+		assertResult(1994)(RomanToInteger.theirSolution("MCMXCIV"))
+
+	ignore("62. Unique Paths"):
+		assertResult(28)(UniquePaths.theirSolution(7, 3))
+		assertResult(3)(UniquePaths.theirSolution(2, 3))
+		assertResult(193536720)(UniquePaths.mySolution(23, 12))
+
+	test("70. Climbing Stairs"):
+		assertResult(2)(ClimbingStairs.mySolution(2))
+		assertResult(3)(ClimbingStairs.mySolution(3))
+		assertResult(8)(ClimbingStairs.mySolution(5))
