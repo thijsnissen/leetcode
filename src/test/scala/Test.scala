@@ -50,6 +50,14 @@ class Test extends AnyFunSuite:
 		assertResult(58)(RomanToInteger.theirSolution("LVIII"))
 		assertResult(1994)(RomanToInteger.theirSolution("MCMXCIV"))
 
+	test("20. Valid Parentheses"):
+		assertResult(true)(ValidParentheses.mySolution("()"))
+		assertResult(true)(ValidParentheses.mySolution("(also)[with]{content}"))
+		assertResult(true)(ValidParentheses.mySolution("([{}])"))
+		assertResult(false)(ValidParentheses.mySolution("(]"))
+		assertResult(false)(ValidParentheses.mySolution("([{]})"))
+		assertResult(false)(ValidParentheses.mySolution("]"))
+
 	ignore("62. Unique Paths"):
 		assertResult(28)(UniquePaths.theirSolution(7, 3))
 		assertResult(3)(UniquePaths.theirSolution(2, 3))
