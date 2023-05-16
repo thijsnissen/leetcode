@@ -11,3 +11,12 @@ object SearchInsertPosition extends App:
 		val result = nums.indexWhere(_ >= target)
 
 		if result < 0 then nums.length else result
+
+	def adaptedMarcosSolution(nums: Array[Int], target: Int): Int =
+		@annotation.tailrec
+		def go(find: Array[Int], idx: Int = 0): Int =
+			if find.isEmpty then nums.length
+			else if find.head >= target then idx
+			else go(find.tail, idx + 1)
+
+		go(nums)
