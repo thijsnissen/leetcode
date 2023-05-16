@@ -58,6 +58,20 @@ class Test extends AnyFunSuite:
 		assertResult(false)(ValidParentheses.mySolution("([{]})"))
 		assertResult(false)(ValidParentheses.mySolution("]"))
 
+	test("35. Search Insert Position"):
+		assertResult(2)(SearchInsertPosition.mySolution2(Array(1, 3, 5, 6), 5))
+		assertResult(1)(SearchInsertPosition.mySolution2(Array(1, 3, 5, 6), 2))
+		assertResult(4)(SearchInsertPosition.mySolution2(Array(1, 3, 5, 6), 7))
+		assertResult(0)(SearchInsertPosition.mySolution2(Array(1, 3, 5, 6), 0))
+		assertResult(0)(SearchInsertPosition.mySolution2(Array(1), 0))
+
+		assertResult(2)(SearchInsertPosition.adaptedMarcosSolution(Array(1, 3, 5, 6), 5))
+		assertResult(1)(SearchInsertPosition.adaptedMarcosSolution(Array(1, 3, 5, 6), 2))
+		assertResult(4)(SearchInsertPosition.adaptedMarcosSolution(Array(1, 3, 5, 6), 7))
+		assertResult(0)(SearchInsertPosition.adaptedMarcosSolution(Array(1, 3, 5, 6), 0))
+		assertResult(0)(SearchInsertPosition.adaptedMarcosSolution(Array(1), 0))
+		assertResult(0)(SearchInsertPosition.adaptedMarcosSolution(Array(1), 1))
+
 	ignore("62. Unique Paths"):
 		assertResult(28)(UniquePaths.theirSolution(7, 3))
 		assertResult(3)(UniquePaths.theirSolution(2, 3))
