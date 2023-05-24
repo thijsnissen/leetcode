@@ -27,7 +27,7 @@ class Test extends AnyFunSuite:
 		assertResult(expected = List(0))(actual = AddTwoNumbers.mySolution3(List(0), List(0)))
 		assertResult(expected = List(8, 9, 9, 9, 0, 0, 0, 1))(actual = AddTwoNumbers.mySolution3(List(9, 9, 9, 9, 9, 9, 9), List(9, 9, 9, 9)))
 
-	test("3. LongestSubstringWithoutRepeatingCharacters"):
+	test("3. Longest Substring Without Repeating Characters"):
 		assertResult(expected = 3)(LongestSubstringWithoutRepeatingCharacters.mySolution("abcabcbb"))
 		assertResult(expected = 1)(LongestSubstringWithoutRepeatingCharacters.mySolution("bbbbb"))
 		assertResult(expected = 3)(LongestSubstringWithoutRepeatingCharacters.mySolution("pwwkew"))
@@ -57,6 +57,10 @@ class Test extends AnyFunSuite:
 		assertResult(false)(ValidParentheses.mySolution("(]"))
 		assertResult(false)(ValidParentheses.mySolution("([{]})"))
 		assertResult(false)(ValidParentheses.mySolution("]"))
+
+	test("26. Remove Duplicates from Sorted Array"):
+		assertResult(2)(RemoveDuplicatesfromSortedArray.mySolution(Array(1, 1, 2)))
+		assertResult(5)(RemoveDuplicatesfromSortedArray.mySolution(Array(0, 0, 1, 1, 1, 2, 2, 3, 3, 4)))
 
 	test("35. Search Insert Position"):
 		assertResult(2)(SearchInsertPosition.mySolution2(Array(1, 3, 5, 6), 5))
